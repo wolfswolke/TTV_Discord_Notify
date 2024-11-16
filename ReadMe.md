@@ -16,4 +16,8 @@ Im already pre hosting this wrapper publicly, so you don't have to worry about i
 
 `WEBHOOK_URL=https://discord.com/api/webhooks/a/b` - Your public Discord Webhook URL
 
-`WEBHOOK_URL_DEV=https://discord.com/api/webhooks/a/b` - Your Testing Discord Webhook URL. (Only required if DEV=true)
+# Optional Environment Variables
+
+If you set `DEV=true` you will need to set the following environment variables.
+
+`WEBHOOK_URL_DEV=https://discord.com/api/webhooks/a/b` - Your Testing Discord Webhook URL. 
