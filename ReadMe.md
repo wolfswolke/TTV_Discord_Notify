@@ -6,7 +6,7 @@ This script uses the [Twitch API wrapper](https://github.com/jenslys/twitch-api-
 Im already pre hosting this wrapper publicly, so you don't have to worry about it if you don't want to.
 
 # How to use
-1. Docker pull the image `docker pull wolfswolke/TTV_Discord_Notifier`
+1. Docker pull the image `docker pull ghcr.io/wolfswolke/ttv_discord_notifier:latest`
 2. Run the image with the required environment variables.
 
 # Environment Variables
