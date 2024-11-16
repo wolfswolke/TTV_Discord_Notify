@@ -10,9 +10,20 @@ then
       echo "\$WEBHOOK_URL is empty"
       exit 99
 fi
+if [ -z "$COLOR" ]
+then
+      echo "\$COLOR is empty"
+      exit 99
+fi
+# Check VOD Url. If empty set https://vod.zkwolf.com/info/${CHANNEL_NAME}. Else set custom VOD URL and add ${CHANNEL_NAME} to the end
+if [ -z "$VOD_URL" ]
+then
+      VOD_URL="https://vod.zkwolf.com/info/${CHANNEL_NAME}"
+else
+      VOD_URL="${VOD_URL}${CHANNEL_NAME}"
+fi
 
 CHANNEL_URL="https://www.twitch.tv/${CHANNEL_NAME}"
-VOD_URL="https://vod.zkwolf.com/info/${CHANNEL_NAME}"
 STREAM_PREVIEW="https://static-cdn.jtvnw.net/previews-ttv/live_user_${CHANNEL_NAME}-1920x1080.jpg"
 
 if [[ "${DEV}" == "true" ]]; then
@@ -27,7 +38,7 @@ send_webhook() {
   "embeds": [{
     "title": "${CHANNEL_NAME}",
     "url": "${CHANNEL_URL}",
-    "color": 6553771,
+    "color": ${COLOR},
     "image": {
       "url": "${STREAM_PREVIEW}"
     },
