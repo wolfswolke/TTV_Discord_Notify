@@ -7,7 +7,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: TTV_Discord_Notifier
+  IMAGE_NAME: ttv_discord_notifier
   PUSH_TAG: latest
 
 jobs:
