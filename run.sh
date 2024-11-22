@@ -102,5 +102,9 @@ while true; do
       message_sent=false
     fi
   fi
-  sleep 300
+  if [[ "${message_sent}" == "true" ]]; then
+    sleep 1800
+  else
+    sleep 300
+  fi
 done
