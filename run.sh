@@ -85,7 +85,6 @@ get_ttv_info() {
 # Main loop
 message_sent=false
 while true; do
-  echo "Checking for ${CHANNEL_NAME} at $(date)"
   ttv_info=$(get_ttv_info 2>/dev/null || echo "null")
   if [[ "${ttv_info}" == "null" ]]; then
     message_sent=false
